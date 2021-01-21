@@ -100,7 +100,7 @@ set_target_properties(glfw PROPERTIES
                       C_STANDARD 99
                       C_EXTENSIONS OFF
                       DEFINE_SYMBOL _GLFW_BUILD_DLL
-                      FOLDER "GLFW3")
+                      FOLDER ${GLFW_PROJECT_DIR})
 
 target_include_directories(glfw PUBLIC
                            "$<BUILD_INTERFACE:${GLFW_SOURCE_DIR}/include>"

@@ -66,6 +66,8 @@ if (GLFW_BUILD_DOCS)
     find_package(Doxygen)
 endif()
 
+set(GLFW_PROJECT_DIR "0. External Libraries/${GLFW_LIB_NAME}")
+
 #--------------------------------------------------------------------
 # Set compiler specific flags
 #--------------------------------------------------------------------
@@ -315,7 +317,7 @@ if (GLFW_INSTALL)
         add_custom_target(uninstall
                           "${CMAKE_COMMAND}" -P
                           "${GLFW_BINARY_DIR}/cmake_uninstall.cmake")
-        set_target_properties(uninstall PROPERTIES FOLDER "GLFW3")
+        set_target_properties(uninstall PROPERTIES FOLDER ${GLFW_PROJECT_DIR})
     endif()
 endif()
 
